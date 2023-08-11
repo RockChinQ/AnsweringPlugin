@@ -1,0 +1,6 @@
+# llm-embed-qa的后端地址不需要填写精确到接口
+endpoint: http://example.com
+# 回答的话题，仅在提示时使用
+topic: QChatGPT 项目
+# 若后端未找到相关资料，是否跳过后续响应
+skip_if_not_found: true
