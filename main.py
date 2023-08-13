@@ -58,7 +58,7 @@ class AnsweringPlugin(Plugin):
                 if 'skip_tips' in self.cfg and self.cfg['skip_tips'] != "":
                     event.add_return(
                         "reply",
-                        ["没有找到与问题相关的资料哦"]
+                        [self.cfg['skip_tips']]
                     )
                 event.prevent_default()
                 event.prevent_postorder()
