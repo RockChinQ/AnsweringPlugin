@@ -4,3 +4,5 @@ endpoint: http://example.com
 topic: QChatGPT 项目
 # 若后端未找到相关资料，是否跳过后续响应
 skip_if_not_found: true
+# 跳过时的提示消息，为空时不发送
+skip_tips: ''

@@ -54,10 +54,12 @@ class AnsweringPlugin(Plugin):
             )
         else: # 没有找到相关资料
             if self.cfg['skip_if_not_found']:
-                event.add_return(
-                    "reply",
-                    ["没有找到与问题相关的资料哦"]
-                )
+                
+                if 'skip_tips' in self.cfg and self.cfg['skip_tips'] != "":
+                    event.add_return(
+                        "reply",
+                        ["没有找到与问题相关的资料哦"]
+                    )
                 event.prevent_default()
                 event.prevent_postorder()
 
