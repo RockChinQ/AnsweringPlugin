@@ -47,6 +47,8 @@ class AnsweringPlugin(Plugin):
         if len(json_data['doc_names']) > 0:
             event.prevent_default()
             event.prevent_postorder()
+
+            logging.info("使用以下文档生成的回答：{}".format(json_data['doc_names']))
             
             event.add_return(
                 "reply",
